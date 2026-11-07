@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>校园音乐 · 客户端下载</title>
+<meta name="description" content="校园音乐分享平台 Android / Windows 客户端下载">
+<link rel="icon" href="img/icon-192.png">
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#0e0e13; --card:#17171f; --line:#262635; --text:#e9e9f2; --muted:#8e8ea4;
+    --brand:#5b7cfa; --brand2:#8a5bfa;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100dvh;background:
+      radial-gradient(900px 500px at 50% -10%,#20223a,#0e0e13 62%);
+    color:var(--text);
+    font:15px/1.7 -apple-system,"Segoe UI",system-ui,"Noto Sans SC","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:56px 22px 80px}
+  header{display:flex;align-items:center;gap:14px;margin-bottom:44px}
+  header img{width:56px;height:56px;border-radius:15px;box-shadow:0 10px 30px rgba(91,124,250,.35)}
+  header h1{font-size:20px;margin:0;letter-spacing:.3px}
+  header p{margin:2px 0 0;color:var(--muted);font-size:13px}
+  .hero{margin-bottom:34px}
+  .hero h2{font-size:30px;line-height:1.35;margin:0 0 12px;letter-spacing:.5px}
+  .hero h2 span{background:linear-gradient(135deg,#7c9dff,#b98bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);margin:0;max-width:560px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 10px}
+  .card{
+    background:linear-gradient(180deg,#191922,#15151c);border:1px solid var(--line);
+    border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px;
+    transition:.18s;position:relative;overflow:hidden;
+  }
+  .card:hover{border-color:#39406a;transform:translateY(-2px)}
+  .card .ico{font-size:26px}
+  .card h3{margin:0;font-size:16px}
+  .card .meta{color:var(--muted);font-size:12.5px;margin:0}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    box-shadow:0 8px 24px rgba(91,124,250,.28);transition:.16s;
+  }
+  .btn:hover{filter:brightness(1.06)}
+  .btn.ghost{background:#22222e;border:1px solid var(--line);box-shadow:none;color:var(--text);font-weight:500}
+  .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+  .note{
+    background:#15151c;border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px;margin-top:28px;font-size:13.5px;color:var(--muted);
+  }
+  .note b{color:var(--text)}
+  .note ol{margin:8px 0 0;padding-left:20px}
+  .note li{margin:4px 0}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+  .chip{font-size:12px;color:#a9b4d8;background:#181826;border:1px solid #262a44;padding:5px 11px;border-radius:999px}
+  footer{margin-top:46px;color:#5f5f74;font-size:12px;border-top:1px solid #1d1d28;padding-top:18px}
+  code{background:#101017;padding:2px 6px;border-radius:6px;color:#9fb4ff;font-size:12.5px}
+  @media(max-width:680px){
+    .wrap{padding:36px 18px 60px}
+    .cards{grid-template-columns:1fr}
+    .hero h2{font-size:24px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="img/icon-192.png" alt="校园音乐">
+    <div>
+      <h1>校园音乐</h1>
+      <p>校园原创音乐分享平台 · 客户端</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>把校园里的<span>每一首歌</span><br>装进手机和电脑</h2>
+    <p>与网页版同一套界面和数据。内置离线壳，没网也能打开；服务器地址可在 App 内随时修改。</p>
+    <div class="chips">
+      <span class="chip">离线可开</span>
+      <span class="chip">音频拖动续播</span>
+      <span class="chip">地址可切换</span>
+      <span class="chip">自动跟随网页更新</span>
+    </div>
+  </section>
+
+  <div class="cards">
+    <article class="card">
+      <div class="ico">📱</div>
+      <h3>Android 版</h3>
+      <p class="meta" id="androidMeta">APK · 正在获取版本信息…</p>
+      <a class="btn" id="btnApk" href="app/campus-music.apk" download>⬇ 下载 APK</a>
+      <p class="meta">Android 8.0 及以上 · 安装时需允许「未知来源」</p>
+    </article>
+
+    <article class="card">
+      <div class="ico">💻</div>
+      <h3>Windows 版</h3>
+      <p class="meta" id="winMeta">安装包 · 正在获取版本信息…</p>
+      <a class="btn" id="btnExe" href="app/CampusMusic_1.0.0_x64-setup.exe" download>⬇ 下载安装包</a>
+      <p class="meta">Windows 10 / 11 · 需 WebView2（系统一般自带）</p>
+    </article>
+  </div>
+
+  <div class="note">
+    <b>第一次打开需要填服务器地址</b>（默认已填好，直接点「保存并连接」即可）：
+    <ol>
+      <li>App 会自动检测后端；连不上会先跳到设置页</li>
+      <li>填 <code>http://frp-oil.com:46261</code> 或你自己的地址</li>
+      <li>地址以后变了，在同一页面改就行，不用重装</li>
+    </ol>
+  </div>
+
+  <footer>
+    构建产物由 Tauri v2 打包 · 客户端只负责开窗口，界面与业务全部在网页层 ·
+    <span id="buildTime">—</span>
+  </footer>
+</div>
+
+<script>
+  fetch('release-manifest.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (m) {
+      if (!m) return;
+      var apk = (m.files || []).find(function (f) { return /\.apk$/i.test(f.name); });
+      var exe = (m.files || []).find(function (f) { return /setup\.exe$/i.test(f.name); });
+      if (apk) {
+        document.getElementById('androidMeta').textContent =
+          'v' + m.version + ' · ' + (apk.size / 1024 / 1024).toFixed(1) + ' MB · ' + apk.sha256.slice(0, 8);
+        document.getElementById('btnApk').href = 'app/' + apk.name;
+      }
+      if (exe) {
+        document.getElementById('winMeta').textContent =
+          'v' + m.version + ' · ' + (exe.size / 1024 / 1024).toFixed(1) + ' MB · ' + exe.sha256.slice(0, 8);
+        document.getElementById('btnExe').href = 'app/' + exe.name;
+      }
+      if (m.builtAt) document.getElementById('buildTime').textContent = '构建于 ' + m.builtAt;
+    })
+    .catch(function () {});
+</script>
+</body>
+</html>
