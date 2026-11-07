@@ -1,16 +1,17 @@
 {
   "version": "1.0.0",
-  "builtAt": "2026-11-07 20:13:09",
+  "build": "20261108",
+  "builtAt": "2026-11-07 20:35:15",
   "files": [
     {
-      "name": "campus-music-1.0.0.apk",
+      "name": "campus-music-1.0.0-b20261108.apk",
       "size": 8820771,
-      "sha256": "712f5dc566737116f1c01170e0f4edf8249b331e8a522d3681808ceffca0ca2e"
+      "sha256": "50212f4d0a689fc472df8453fb8d2e53d56a97da360c5f6018f071dc5013868a"
     },
     {
-      "name": "CampusMusic_1.0.0_x64.exe",
+      "name": "CampusMusic_1.0.0-b20261108.exe",
       "size": 6166016,
-      "sha256": "3e294c8c0b21cafd4fa20ec40471d1f3b74301b2c961a58c8d95736792b09527"
+      "sha256": "759c7dc1c130b5095d582f1f5395b3018baca837a807e19166d4b03e3c12888a"
     }
   ]
 }
